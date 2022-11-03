@@ -22,11 +22,11 @@
           "powerline_symbol": "\uf418",
           "foreground_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}#FF9248{{ end }}",
-            "{{ if and (g .Ahead 0) (gt .Behind 0) }}#ff4500{{ end }}",
-            "{{ if g .Ahead 0 }}#B388FF{{ end }}",
-            "{{ if g .Behind 0 }}#B388FF{{ end }}"
+            "{{ if and (git .Ahead 0) (git .Behind 0) }}#ff4500{{ end }}",
+            "{{ if git .Ahead 0 }}#B388FF{{ end }}",
+            "{{ if git .Behind 0 }}#B388FF{{ end }}"
           ],
-          "template": " <#ffffff>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
+          "template": " <#ffffff>on</> {{ .HEAD }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
           "properties": {
             "branch_icon": "\ue725 ",
             "fetch_status": true,
